@@ -14,11 +14,13 @@ function writePassword() {
 
 function generatePassword() {
 
-
-
-
-
 var passwordLength = window.prompt ("How many characters would you like your password to be? Choose between 8 and 128");
+
+  var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+  var upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+  var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+  var special = ["!", "£", "$", "%", "&", ",", "*", "+", "-", ".", "/", "<", ">", "?","~"];
+  var Userchoicearray = [];
 
   //Asking the user how many characters they want for their password
   if (isNaN (passwordLength))  {
@@ -35,57 +37,53 @@ var passwordLength = window.prompt ("How many characters would you like your pas
 
    else {
     // Shows the password length user wanted to have
-    console.log(passwordLength);
+    console.log( " Your password will have " + passwordLength + " characters ");
     // Checks criteria in which the password will include
-    confirmlower = confirm("click OK to add lower case letters to your password");
-    confirmupper = confirm("click OK to add upper case letters to your password");
-    confirmknumber = confirm("click OK to add numbers to your password");
-    confirmspecial = confirm("click OK to add special characters to your password");
+    var confirmlower = confirm("click OK to add lower case letters to your password");
+    var confirmupper = confirm("click OK to add upper case letters to your password");
+    var confirmnumber = confirm("click OK to add numbers to your password");
+    var confirmspecial = confirm("click OK to add special characters to your password");
   }
 
-  if (!confirmlower && !confirmupper && !confirmknumber && !confirmspecial) {
+  if (!confirmlower && !confirmupper && !confirmnumber && !confirmspecial) {
     window.alert("you must choose at least one criteria!");
     //if not chosen at least one criteria, function will return
     return;
   }
 
-  var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-  var upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-  var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-  var special = ["!", "£", "$", "%", "&", ",", "*", "+", "-", ".", "/", "<", ">", "?","~"];
-  var Userchoicearray = [];
-
-  if (confirmnlower=true) {
+  if (confirmlower) {
     Userchoicearray = Userchoicearray.concat(lower);
   }
-  console.log(Userchoicearray)
-}
 
-  /*
-  //if (upper) {
-    //Userchoicearray = Userchoicearray.concat(upper);
+  if (confirmupper) {
+    Userchoicearray = Userchoicearray.concat(upper);
   }
 
-  //if (number) {
-    //Userchoicearray = Userchoicearray.concat(number);
+  if (confirmnumber) {
+    Userchoicearray = Userchoicearray.concat(number);
   }
 
-  //if (special) {
-    //Userchoicearray = Userchoicearray.concat(special);
+  if (confirmspecial) {
+    Userchoicearray = Userchoicearray.concat(special);
   }
+
   console.log(Userchoicearray);
-  
-
-
-
-
-
-
-
-
 
    
-}*/
+  }
+
+
+
+ 
+
+
+
+
+
+
+
+
+
 
 
 
