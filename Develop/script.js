@@ -13,18 +13,33 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+
+  var useroptions = {
+    numberofcharacters: 0,
+    lowercase: false,
+    uppercase: false,
+    specialcharcter: false,
+    numberofnumbers: false
+  }
 
 
 function generatePassword() {
-  window.prompt ("How many characterd would you like your password to be? Choose between 8 and 128) ")
+
+  var passwordLength = window.prompt ("How many characters would you like your password to be? Choose between 8 and 128");
   //Asking the user how many characters they want for their password
-  if 
-  
+  if (isNaN (passwordLength))  {
+    window.alert("this must be a number");
+    return;   
+  }
+   else if (passwordLength < 8 || passwordLength > 128)
+   window.alert("this must be a valid number between 8 and 128")
+ 
 
 
-}
+} 
+
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
