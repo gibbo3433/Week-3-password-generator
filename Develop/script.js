@@ -88,8 +88,9 @@ function generatePassword() {
   // shows the user which characters their password may contain
   console.log(" This is a list of the characters which your password may contain " + Userchoicearray);
 
-  // This will creat
+  // This will create the password for the user
   var passwordcreate = []
+  // This will keep adding to the users password, randomly selecting from the Userchoicearray, until the Passlength limit is reached
   for (var i=0; i < Passlength; i++) {
    var randomIndex = Math.floor(Math.random() * Userchoicearray.length);
    passwordcreate.push(Userchoicearray[randomIndex]);
